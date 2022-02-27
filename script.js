@@ -56,7 +56,7 @@ function loadLabeledImages() {
                 } else {
                     typeImage = 'jpg'
                 }
-                const img = await faceapi.fetchImage(`https://raw.githubusercontent.com/anti-duhring/Estudos/main/labeled_images/${label}/${i}.${typeImage}`)
+                const img = await faceapi.fetchImage(`https://raw.githubusercontent.com/anti-duhring/JavaScript-face-recognition-/main/labeled_images/${label}/${i}.${typeImage}`)
                 const detections = await faceapi.detectSingleFace(img).withFaceLandmarks().withFaceDescriptor()
                 descriptions.push(detections.descriptor)
             }
